@@ -8,3 +8,7 @@ Useful class scripts such as twitter comment scrap
 ### Streaming
 1. Scrapping tweets by keywords
 2. limited to 200
+
+### Mapping Facebook data
+1. .json file import
+2. Finding trend
