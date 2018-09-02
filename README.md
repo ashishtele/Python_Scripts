@@ -12,3 +12,5 @@ Useful class scripts such as twitter comment scrap
 ### Mapping Facebook data
 1. .json file import
 2. Finding trend
+
+- Loss functions in ML
