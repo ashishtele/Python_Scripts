@@ -14,3 +14,4 @@ Useful class scripts such as twitter comment scrap
 2. Finding trend
 
 - Loss functions in ML
+- Simple Linear regression
