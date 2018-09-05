@@ -16,3 +16,4 @@ Useful class scripts such as twitter comment scrap
 - Loss functions in ML
 - Simple Linear regression
 - Logistric Regression from Scratch
+- Neural Network from Scratch
