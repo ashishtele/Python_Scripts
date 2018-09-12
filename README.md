@@ -17,3 +17,7 @@ Useful class scripts such as twitter comment scrap
 - Simple Linear regression
 - Logistric Regression from Scratch
 - Neural Network from Scratch
+
+### Machine Learning Practice
+
+- Supervised and Unsupervised
