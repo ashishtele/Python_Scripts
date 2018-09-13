@@ -21,3 +21,4 @@ Useful class scripts such as twitter comment scrap
 ### Machine Learning Practice
 
 - Supervised and Unsupervised
+- MNIST digit 
