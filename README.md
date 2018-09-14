@@ -23,3 +23,4 @@ Useful class scripts such as twitter comment scrap
 - Supervised and Unsupervised
 - MNIST digit
 - Ways of validation
+- Simple Feature Engineering
