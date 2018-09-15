@@ -24,3 +24,4 @@ Useful class scripts such as twitter comment scrap
 - MNIST digit
 - Ways of validation
 - Simple Feature Engineering
+- Naive Baies
