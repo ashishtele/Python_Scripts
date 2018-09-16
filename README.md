@@ -25,3 +25,4 @@ Useful class scripts such as twitter comment scrap
 - Ways of validation
 - Simple Feature Engineering
 - Naive Bayes
+- Linear Regression (depth)
