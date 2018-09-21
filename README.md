@@ -26,3 +26,4 @@ Useful class scripts such as twitter comment scrap
 - Simple Feature Engineering
 - Naive Bayes
 - Linear Regression (depth)
+- SVM (depth)
