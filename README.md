@@ -27,3 +27,4 @@ Useful class scripts such as twitter comment scrap
 - Naive Bayes
 - Linear Regression (depth)
 - SVM (depth)
+- Face Recognition (SVM)
