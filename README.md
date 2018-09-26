@@ -28,3 +28,4 @@ Useful class scripts such as twitter comment scrap
 - Linear Regression (depth)
 - SVM (depth)
 - Face Recognition (SVM)
+- Random Forest Classifier
