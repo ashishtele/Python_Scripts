@@ -29,3 +29,4 @@ Useful class scripts such as twitter comment scrap
 - SVM (depth)
 - Face Recognition (SVM)
 - Random Forest Classifier
+- Digit Recognition (Random Forest)
