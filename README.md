@@ -31,3 +31,4 @@ Useful class scripts such as twitter comment scrap
 - Random Forest Classifier
 - Digit Recognition (Random Forest)
 - PCA
+- PCA: Hand writtern digits
