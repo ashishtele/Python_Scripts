@@ -32,3 +32,4 @@ Useful class scripts such as twitter comment scrap
 - Digit Recognition (Random Forest)
 - PCA
 - PCA: Hand writtern digits
+- Student Recommendation - ML Pipeline
