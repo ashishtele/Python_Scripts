@@ -34,3 +34,4 @@ Useful class scripts such as twitter comment scrap
 - PCA: Hand writtern digits
 - Student Recommendation - ML Pipeline
 - Feature Engineering - Categorical
+- Image Features 
