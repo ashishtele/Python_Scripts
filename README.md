@@ -35,3 +35,4 @@ Useful class scripts such as twitter comment scrap
 - Student Recommendation - ML Pipeline
 - Feature Engineering - Categorical
 - Image Features 
+- Classifying Genetic Mutations
