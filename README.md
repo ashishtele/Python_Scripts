@@ -36,3 +36,4 @@ Useful class scripts such as twitter comment scrap
 - Feature Engineering - Categorical
 - Image Features 
 - Classifying Genetic Mutations
+- Flask startup code
