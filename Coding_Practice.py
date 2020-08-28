@@ -6,3 +6,10 @@ def  twoSum (nums, target ):
 	     d [ target - n ]=  i
 
 twoSum([3,2,4],6)
+
+# Binary Flip
+def bin_flip(n):
+
+  return bin(255 - int(n,2))[2:]
+
+bin_flip('01010101')
