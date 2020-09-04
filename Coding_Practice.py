@@ -26,3 +26,12 @@ class Solution:
             if c != s2[i]:
                 return s1[:i] #stop until hit the split index
         return s1
+
+# no of bits
+
+  def hammingWeight(self, n):
+        result = 0
+        while n:
+            n &= n - 1
+            result += 1
+        return result
