@@ -35,3 +35,21 @@ class Solution:
             n &= n - 1
             result += 1
         return result
+
+# Count Largest Group
+import functools
+import collections
+from collections import defaultdict
+# method 1:
+dict = {ele : [] for ele in range(1,11)}
+# method 2:
+dict = defaultdict(list)
+
+for i in range(1,2+1):
+  k = functools.reduce(lambda x, y: x+y,list(map(int,list(str(i)))))
+
+  #dict[k].append(i)
+  dict[k].append(i)
+
+
+len([ele for ele in dict.values() if len(ele) == len(max([ele for ele in dict.values()], key = len))])
