@@ -51,5 +51,10 @@ for i in range(1,2+1):
   #dict[k].append(i)
   dict[k].append(i)
 
+# Check If a String Can Break Another String
+s1 = 'abc'
+s2 =  'xya'
+all([x <= y for x,y in zip(*sorted([sorted(s1),sorted(s2)]))])
 
 len([ele for ele in dict.values() if len(ele) == len(max([ele for ele in dict.values()], key = len))])
+
