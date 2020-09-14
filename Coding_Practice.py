@@ -57,3 +57,18 @@ len([ele for ele in dict.values() if len(ele) == len(max([ele for ele in dict.va
 s1 = 'abc'
 s2 =  'xya'
 all([x <= y for x,y in zip(*sorted([sorted(s1),sorted(s2)]))])
+
+# pascal triangle
+
+# pascal = [[1]*(i+1) for i in range(numRows)]
+n = 5
+res = [[1],[1,1]]
+for i in range(2,n):
+  temp = []
+  temp.append(1)
+  for j in range(1,i):
+    print(i,j)
+    temp.append(res[i-1][j-1] + res[i-1][j])
+  temp.append(1)
+  res.append(temp)
+res
