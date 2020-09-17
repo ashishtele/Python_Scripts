@@ -73,6 +73,12 @@ for i in range(2,n):
   res.append(temp)
 res
 
+row = [1]
+n = 3
+for _ in range(n):
+  row = [x + y for x,y in zip([0]+row, row+[0])]
+row
+
 # Best Time to Buy and Sell Stock
 class Solution(object):
     def maxProfit(self, prices):
