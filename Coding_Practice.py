@@ -87,3 +87,9 @@ class Solution(object):
             min_price = min(min_price, price)
             max_profit = max(max_profit, price - min_price)
         return max_profit
+
+# Shortest Unsorted Continuous Subarray
+nums = [2, 6, 4, 8, 10, 15]
+
+res = [i for (i, (a, b)) in enumerate(zip(nums, sorted(nums)))  if a != b]
+[0 if not res else res[-1] - res[0] + 1]
