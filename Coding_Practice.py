@@ -93,3 +93,17 @@ nums = [2, 6, 4, 8, 10, 15]
 
 res = [i for (i, (a, b)) in enumerate(zip(nums, sorted(nums)))  if a != b]
 [0 if not res else res[-1] - res[0] + 1]
+
+# Sort Array By Parity
+
+class Solution:
+    def sortArrayByParity(self, A):
+        beg, end = 0, len(A) - 1
+        
+        while beg <= end:
+            if A[beg] % 2 == 0:
+                beg += 1
+            else:
+                A[beg], A[end] = A[end], A[beg]
+                end -= 1
+        return A
