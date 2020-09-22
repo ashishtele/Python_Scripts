@@ -107,3 +107,23 @@ class Solution:
                 A[beg], A[end] = A[end], A[beg]
                 end -= 1
         return A
+
+# Binary Prefix Divisible By 5
+n = [0,1,1,1,1,1]
+
+res = []
+for i in range(len(n)):
+  no = int(str('0b'+''.join([ele for ele in map(str,n[:i+1])])),base=0)
+  if no%5 == 0:
+    res.append(True)
+  else:
+    res.append(False)
+
+res
+
+def prefixesDivBy5(self, A: List[int]) -> List[bool]:
+        ans, b = [], 0
+        for a in A:
+            b = b << 1 | a
+            ans.append(b % 5 == 0)
+        return ans
