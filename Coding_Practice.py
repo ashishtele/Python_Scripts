@@ -127,3 +127,12 @@ def prefixesDivBy5(self, A: List[int]) -> List[bool]:
             b = b << 1 | a
             ans.append(b % 5 == 0)
         return ans
+
+# Sum of Digits in the Minimum Number
+import functools
+n = [34,23,1,24,75,33,54,8]
+
+if functools.reduce(lambda x,y: x + y, list(map(int,str(min(n))))) % 2 == 0:
+  print(1)
+else:
+  print(0)
