@@ -136,3 +136,9 @@ if functools.reduce(lambda x,y: x + y, list(map(int,str(min(n))))) % 2 == 0:
   print(1)
 else:
   print(0)
+
+
+# Decompress Run-Length Encoded List
+nums = [1,2,3,4]
+
+[x for a,b in zip(nums[0::2], nums[1::2]) for x in [b]*a]
