@@ -142,3 +142,7 @@ else:
 nums = [1,2,3,4]
 
 [x for a,b in zip(nums[0::2], nums[1::2]) for x in [b]*a]
+
+#  Running Sum of 1d Array
+def runningSum(self, A):
+        return list(itertools.accumulate(A))
