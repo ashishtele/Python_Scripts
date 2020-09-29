@@ -146,3 +146,18 @@ nums = [1,2,3,4]
 #  Running Sum of 1d Array
 def runningSum(self, A):
         return list(itertools.accumulate(A))
+
+# Can Make Arithmetic Progression From Sequence
+
+class Solution(object):
+    def canMakeArithmeticProgression(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: bool
+        """
+        arr.sort()
+        k = arr[1] - arr[0]
+        for i in range(1, len(arr) - 1):
+            if arr[i+1] - arr[i] != k:
+                return False
+        return True
