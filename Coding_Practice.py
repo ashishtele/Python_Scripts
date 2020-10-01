@@ -161,3 +161,23 @@ class Solution(object):
             if arr[i+1] - arr[i] != k:
                 return False
         return True
+
+# Add binary
+a = "11"
+b = "1"
+
+res = [0] * (max(len(a),len(b))+1)
+
+if len(a) != len(b):
+  a = a.zfill(max(len(a),len(b)))
+  b = b.zfill(max(len(a),len(b)))
+
+pos = len(res) - 1
+for i in range(len(a)):
+
+  res[pos] = res[pos] + (int(a[~i]) + int(b[~i]))
+  res[pos-1] = int(res[pos]/2)
+  res[pos] = res[pos]%2
+  pos -= 1
+
+res
