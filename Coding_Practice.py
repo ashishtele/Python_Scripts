@@ -181,3 +181,20 @@ for i in range(len(a)):
   pos -= 1
 
 res
+
+# Repeated String Match
+a = "abc"
+b = "wxyz"
+
+cnt = 0
+temp = ''
+thr = int((len(b)/len(a))+1)
+while thr > 0:
+  temp = temp + a
+  cnt += 1
+  if b in temp:
+    print(cnt)
+    break
+  thr -= 1
+if thr == 0:
+  print(-1)
