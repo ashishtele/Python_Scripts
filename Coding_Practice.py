@@ -198,3 +198,24 @@ while thr > 0:
   thr -= 1
 if thr == 0:
   print(-1)
+
+#  Unique Morse Code Words
+words = ["gin", "zen", "gig", "msg"]
+
+morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+alp = [chr(i) for i in range(97,97+26,1)]
+
+dic = {alp:morse for alp,morse in zip(alp,morse)}
+dic
+ot = []
+for w in words:
+  res = ''
+  for a in w:
+    res = res + dic[a]
+  ot.append(res)
+len(set(ot))
+
+def uniqueMorseRepresentations(self, words):
+        d = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",
+             "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."]
+        return len({''.join(d[ord(i) - ord('a')] for i in w) for w in words})
