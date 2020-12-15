@@ -219,3 +219,22 @@ def uniqueMorseRepresentations(self, words):
         d = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--",
              "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."]
         return len({''.join(d[ord(i) - ord('a')] for i in w) for w in words})
+
+
+# Armstrong Number
+
+n = 123
+
+def armstr_number(n):
+
+  l = len(str(n))
+  s = 0
+  for i in str(n):
+    s = s + pow(int(i), l)
+  if n == s:
+    print(True)
+  else:
+    print(False)
+
+
+armstr_number(n)
