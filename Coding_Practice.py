@@ -238,3 +238,12 @@ def armstr_number(n):
 
 
 armstr_number(n)
+
+# Shallow copies 
+# with nested objects, modifying on level 2 or deeper does affect shallow copy
+
+import copy
+1. list_b = copy.copy(list_a)
+2. list_b = list(list_a)
+3. list_b = list_a[:]
+4. list_b = list_a.copy()
