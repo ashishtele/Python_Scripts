@@ -297,3 +297,27 @@ def newton(f,Df,x0,epsilon,max_iter):
         xn = xn - fxn/Dfxn
     print('Exceeded maximum iterations. No solution found.')
     return None
+
+# lake perimeter
+from itertools import chain, groupby
+
+grid = [[1,0,1],
+        [1,1,1]]
+s = sum(list(chain(*grid))) * 4
+
+cnt = 0
+for i in zip(*grid):
+  print(i)
+  for j in range(len(i)-1):
+    if i[j] == i[j+1] == 1:
+      cnt += 1
+cnt1 = 0
+for i in grid:
+  print(i)
+  for j in range(len(i)-1):
+    if i[j] == i[j+1] == 1:
+      cnt1 += 1
+cnt1
+
+res = s - (cnt + cnt1)*2
+res
