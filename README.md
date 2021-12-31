@@ -38,3 +38,4 @@ Useful class scripts such as twitter comment scrap
 - Classifying Genetic Mutations
 - Flask startup code
 - Code Practice
+- Deployment of Machine Learning Models Udemy Course: CNN Code
