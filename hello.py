@@ -223,6 +223,32 @@ def CalcOutliers(df_num):
     
     return
 
+# Display value counts and NaN counts
+def show_value_counts(df, column):
+    value_count_df = pd.DataFrame(df[column].value_counts().rename_axis(column).reset_index(name='counts'))
+    value_count_df['percentage'] = round(100 * (value_count_df['counts'] / len(df)),1)
+    return value_count_df
+
+def show_nan_counts(df):
+    nan_count_df = pd.DataFrame(df.isna().sum()).sort_values(by=0, ascending = False)
+    nan_count_df.columns = ['counts']
+    nan_count_df['percentage'] = round(100 * (nan_count_df['counts'] / len(df)),1)
+    return nan_count_df
+
+# Display correlation plot as heatmap
+def show_heatmap(data, figsize=(12,8), 
+                 highest_only=False, 
+                 thresold=0.7, # Look at only highly correlated pairs
+                 annot=False):
+    correlation_matrix = data.corr()
+    high_corr = correlation_matrix[np.abs(correlation_matrix )>= thresold]
+    plt.figure(figsize=figsize)
+
+    if highest_only:
+        sns.heatmap(high_corr, annot=annot, cmap="Greens", 
+                    linecolor='black', linewidths=0.1)
+    else:
+        sns.heatmap(correlation_matrix, annot=annot)
 
 app = Flask(__name__)
 
