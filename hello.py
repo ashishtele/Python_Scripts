@@ -354,7 +354,35 @@ def rare_encoder(dataframe, rare_perc, cat_cols):
         dataframe[col] = np.where(dataframe[col].isin(rare_labels), 'Rare', dataframe[col])
 
     return dataframe
+
+########################################################################################			  
+from sklearn.neural_network import MLPRegressor
+from sklearn.ensemble import ExtraTreesRegressor
+from mlxtend.regressor import StackingCVRegressor
+
+from sklearn.svm import SVR
+from sklearn.linear_model import Lasso
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from xgboost import XGBRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.metrics import mean_squared_error  
+from sklearn.ensemble import ExtraTreesRegressor
+
+et  = ExtraTreesRegressor(n_estimators=950 ,  max_features = 'auto', max_leaf_nodes=None, n_jobs= -1, random_state = 0, verbose = 0)
+gbr = GradientBoostingRegressor()
+lasso = Lasso()
+xgbr = XGBRegressor()
+svr = SVR(kernel= 'rbf', gamma= 'auto', tol=0.001, C=100.0, max_iter=-1)
+rf = RandomForestRegressor(n_estimators=900,  random_state=0)
+lr = LinearRegression(fit_intercept=True, normalize=True, copy_X=True, n_jobs=-1)
+knnR = KNeighborsRegressor(n_neighbors=20, n_jobs=-1)
+reg = StackingCVRegressor(regressors=[  lasso , xgbr , et],meta_regressor=lasso)
+
+reg.fit(x_train, y_train, groups = None)
 			  
+##################################################################################			  
 			  
 app = Flask(__name__)
 
