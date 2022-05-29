@@ -51,6 +51,27 @@ def custom_countplot(x, y, **kwargs):
     _ = ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right')
     replace_labels(ax, "%")
 
+
+def fill_by_group(X, group_by, fill_by="median"):    
+    X["Age"] = X["Age"].fillna(X.groupby(group_by)["Age"].transform(fill_by))
+    return np.array(X["Age"]).reshape(-1, 1)
+
+def count_features(X, offset=0):
+    X = X.apply(lambda x: x.sum(), axis=1) + offset
+    return np.array(X).reshape(-1, 1)
+
+
+def discretize_feature(X, bins=[0,1], labels=None):
+    if isinstance(X, np.ndarray):
+        X = pd.DataFrame(X)
+    X = X.apply(lambda x: pd.cut(x, bins=bins, include_lowest=True,labels=labels))
+    return np.array(X).reshape(-1, 1)
+
+def boolean_feature(X):
+    X = X.apply(lambda x: x.sum() == 0, axis=1).astype(int)
+    return np.array(X).reshape(-1, 1)
+
+
 class TemporalVariableTransformer(BaseEstimator, TransformerMixin):
 	# Temporal elapsed time transformer
 
