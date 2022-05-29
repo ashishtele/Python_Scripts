@@ -5,9 +5,51 @@
 
 
 from flask import Flask, redirect, url_for, request
+import matplotlib.cm as cm
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import anderson, norm, chi2_contingency
+from statsmodels.stats.weightstats import ztest
 from sklearn.base import BaseEstimator, TransformerMixin
 
 
+def replace_labels(ax, char, axis='y'):
+    # Customize y-labels
+    if axis == 'x':
+        _ = ticks_loc = ax.get_xticks().tolist()
+        _ = ax.set_xticks(ticks_loc)
+        _ = ax.set_xticklabels([f'{x:,.0f}{char}' for x in ticks_loc])
+    if axis == 'y':
+        _ = ticks_loc = ax.get_yticks().tolist()
+        _ = ax.set_yticks(ticks_loc)
+        _ = ax.set_yticklabels([f'{x:,.0f}{char}' for x in ticks_loc])
+    
+def perform_anderson_test(data):
+	result = anderson(data)
+	print('Statistic = %.2f' % result.statistic)
+
+	p = 0
+	for i in range(len(result.critical_values)):
+		sl, cv = result.significance_level[i], result.critical_values[i]
+		if result.statistic < result.critical_values[i]:
+			print(f'significance level = {sl:.2f}, critical value = {cv:.2f}, (fail to reject H0)')
+		else:
+			print(f'significance level = {sl:.2f}, critical value = {cv:.2f}, (reject H0)')
+	print('\n')
+
+def get_test_result(name, score, p_value, significance=0.05):
+    # Test the p-value
+    print(f"{name}")
+    print(f"Score: {score:0.2f} and p-value: {p_value:0.2f}")
+    if (p_value < significance):
+        print(f'H0 can be rejected!')
+    else:
+        print('Fail to reject H0')
+
+def custom_countplot(x, y, **kwargs):
+    ax = sns.barplot(x=x, y=y, estimator=lambda x: len(x) / len(df) * 100)
+    _ = ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right')
+    replace_labels(ax, "%")
 
 class TemporalVariableTransformer(BaseEstimator, TransformerMixin):
 	# Temporal elapsed time transformer
