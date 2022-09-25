@@ -1,4 +1,4 @@
-# Python Scripts !!
+# Python Scripts !
 Useful class scripts such as twitter comment scrap, pdf to excel extractor etc
 
 ### Rest 
