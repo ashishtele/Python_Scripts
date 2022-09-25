@@ -39,3 +39,5 @@ Useful class scripts such as twitter comment scrap, pdf to excel extractor etc
 - Flask startup code
 - Code Practice
 - Deployment of Machine Learning Models Udemy Course: CNN Code
+
+Thank you!
