@@ -1,5 +1,5 @@
-# Python Scripts !.
-Useful class scripts such as twitter comment scrap, pdf to excel extractor etc
+# Python Scripts
+Useful class scripts such as Twitter comment scrap, pdf to Excel extractor etc
 
 ### Rest 
 1. Useful to scrap tweets by a person 
@@ -15,7 +15,7 @@ Useful class scripts such as twitter comment scrap, pdf to excel extractor etc
 
 - Loss functions in ML
 - Simple Linear regression
-- Logistric Regression from Scratch
+- Logistic Regression from Scratch
 - Neural Network from Scratch
 
 ### Machine Learning Practice
@@ -31,7 +31,7 @@ Useful class scripts such as twitter comment scrap, pdf to excel extractor etc
 - Random Forest Classifier
 - Digit Recognition (Random Forest)
 - PCA
-- PCA: Hand writtern digits
+- PCA: Hand written digits
 - Student Recommendation - ML Pipeline
 - Feature Engineering - Categorical
 - Image Features 
