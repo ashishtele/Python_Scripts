@@ -31,7 +31,7 @@ Useful class scripts such as Twitter comment scrap, pdf to Excel extractor etc
 - Random Forest Classifier
 - Digit Recognition (Random Forest)
 - PCA
-- PCA: Hand written digits
+- PCA: Handwritten digits
 - Student Recommendation - ML Pipeline
 - Feature Engineering - Categorical
 - Image Features 
